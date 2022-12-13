@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}" />
+    <title>Document</title>
+  </head>
+    <form
+      action="/upload"
+      method="post"
+      id="upload-form"
+      enctype="multipart/form-data"
+    >
+      <div>
+        <label for="unknownImage">Upload unknown face image</label></br>
+        <input
+          type="file"
+          name="unknownImage"
+          id="unknownImage"
+          accept="image/png, image/gif, image/jpeg"
+        />
+      </div>
+    
+      <div id="known-image-div">
+        <label id="knownImageLabel" for="knownImage">Upload known face image</label><br>
+        <input
+          type="file"
+          name="knownImage"
+          id="knownImage"
+          accept="image/png, image/gif, image/jpeg"
+        />
+      </div>
+     
+
+      <button type="submit"">Upload</button>
+    </form>
+  </body>
+</html>
